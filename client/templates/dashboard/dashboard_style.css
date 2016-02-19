@@ -1,0 +1,11 @@
+.tabs {
+    overflow-x: hidden;
+}
+
+.tabs-container, .tabs {
+    background-color: #38A2C5;
+}
+
+.tabs .tab a{
+    color: #fff;
+}

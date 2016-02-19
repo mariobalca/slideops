@@ -1,0 +1,18 @@
+nav {
+    background-color: #41AFD4;
+}
+
+nav .btn {
+    background-color: #287995;
+    font-weight: bold;
+}
+
+nav .brand-logo {
+    font-size: 1.5rem;
+}
+
+nav .button-menu {
+    margin: 0 20px;
+    display: inline-block;
+    cursor: pointer;
+}
