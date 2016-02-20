@@ -2,32 +2,84 @@
 	{{ > nav }}
 	<div class="layout-list">
 		<label>Layout</label>
-
-		<div class="layout z-depth-1 active"></div>
-		<div class="layout z-depth-1"></div>
-		<div class="layout z-depth-1"></div>
+		<div class="layout z-depth-1 active">
+			<div class="content">
+				<p class="title">Cover</p>
+				<p class="subtitle">Title and subtitle</p>
+			</div>
+		</div>
+		<div class="layout z-depth-1">
+			<div class="content">
+				<p class="title">Default</p>
+				<p class="subtitle">Header and paragraph</p>
+			</div>
+		</div>
+		<div class="layout z-depth-1">
+			<div class="content">
+				<p class="title">Media</p>
+				<p class="subtitle">Header and media object</p>
+			</div>
+		</div>
+		<div class="layout z-depth-1">
+			<div class="content">
+				<p class="title">Chart</p>
+				<p class="subtitle">Header and data visualization</p>
+			</div>
+		</div>
 	</div>
 	<div class="wrapper">
 		<nav class="toolbar">
 			<div class="nav-wrapper">
-
+				<div class="tool color-picker">
+					<span class="color-square"></span>
+					<label>Background color</label>
+					<input type="hidden" name="color-input" />
+				</div>
+				<div class="tool color-picker">
+					<span class="color-square"></span>
+					<label>Headings color</label>
+					<input type="hidden" name="color-input" />
+				</div>
+				<div class="tool color-picker">
+					<span class="color-square"></span>
+					<label>Paragraphs color</label>
+					<input type="hidden" name="color-input" />
+				</div>
+				<div class="tool tool-select">
+					<label>Font-size</label>
+					<select name="font-size">
+						<option value="small">Small</option>
+						<option value="medium" selected>Medium</option>
+						<option value="large">Large</option>
+					</select>
+				</div>
+				<div class="tool tool-select presentation-time">
+					<label>Presentation Time</label>
+					<select name="presentation-time">
+						<option value="5">5 min</option>
+						<option value="10" selected>10 min</option>
+						<option value="15">15 min</option>
+						<option value="20">20 min</option>
+						<option value="30">30 min</option>
+					</select>
+				</div>
 			</div>
 		</nav>
 		<div class="presentation">
 			<div class="row">
-				<div class="col s2">
+				<div class="col l2 m2 s2">
 					<div class="row thumbnail-list">
-						<div class="col s12">
+						<div class="col l12 m12 s12">
 							<a class="thumbnail z-depth-1 active">
 
 							</a>
 						</div>
-						<div class="col s12">
+						<div class="col l12 m12 s12">
 							<a class="thumbnail z-depth-1">
 
 							</a>
 						</div>
-						<div class="col s12">
+						<div class="col l12 m12 s12">
 							<a class="thumbnail thumbnail-add z-depth-1">
 								<span class="content">
 									<i class="fa fa-plus"></i>
@@ -37,7 +89,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col s8">
+				<div class="col l8 m8 s8">
 					<div class="slide z-depth-1">
 
 					</div>
