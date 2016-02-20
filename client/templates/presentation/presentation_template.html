@@ -1,51 +1,48 @@
 <template name='presentation'>
 	{{ > nav }}
-	<nav class="toolbar">
-		<div class="nav-wrapper">
+	<div class="layout-list">
+		<label>Layout</label>
 
+		<div class="layout z-depth-1 active"></div>
+		<div class="layout z-depth-1"></div>
+		<div class="layout z-depth-1"></div>
+	</div>
+	<div class="wrapper">
+		<nav class="toolbar">
+			<div class="nav-wrapper">
+
+			</div>
+		</nav>
+		<div class="presentation">
+			<div class="row">
+				<div class="col s2">
+					<div class="row thumbnail-list">
+						<div class="col s12">
+							<a class="thumbnail z-depth-1 active">
+
+							</a>
+						</div>
+						<div class="col s12">
+							<a class="thumbnail z-depth-1">
+
+							</a>
+						</div>
+						<div class="col s12">
+							<a class="thumbnail thumbnail-add z-depth-1">
+								<span class="content">
+									<i class="fa fa-plus"></i>
+									<span>Novo slide</span>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col s8">
+					<div class="slide z-depth-1">
+
+					</div>
+				</div>
+			</div>
 		</div>
-	</nav>
-		<div class="row">
-			<div class="col s2">
-				<div class="row thumbnail-list">
-					<div class="col s12">
-						<a class="thumbnail z-depth-1">
-
-						</a>
-					</div>
-					<div class="col s12">
-						<a class="thumbnail z-depth-1">
-
-						</a>
-					</div>
-					<div class="col s12">
-						<a class="thumbnail thumbnail-add z-depth-1">
-							<span class="content">
-								<i class="fa fa-plus"></i>
-								<span>Novo slide</span>
-							</span>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="col s8">
-				<div class="slide z-depth-1">
-
-				</div>
-			</div>
-			<div class="col s2">
-				<div class="row thumbnail-list" style="background-color: rgba(247,247,247,1)">
-					<div class="col s12">
-						<a class="thumbnail z-depth-1">
-
-						</a>
-					</div>
-					<div class="col s12">
-						<a class="thumbnail z-depth-1">
-
-						</a>
-					</div>
-				</div>
-			</div>
 	</div>
 </template>

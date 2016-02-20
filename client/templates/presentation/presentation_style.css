@@ -1,17 +1,42 @@
 .thumbnail-list {
     height: 700px;
     text-align: center;
+    height: 100%;
+    z-index: 10000;
+}
+
+.layout-list {
+    text-align: center;
+    height: 100%;
+    position: fixed;
+    width: 250px;
+    right: 0;
+    top: 0;
+    background-color: rgb(240, 240, 240);
+    z-index: 2;
+    padding-top: 170px;
+}
+
+.layout-list label {
+    text-align: left;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 20px;
 }
 
 .toolbar {
     background-color: #ECECEC;
-    margin-bottom: 40px;
     height: 50px;
+    z-index: 800;
+    position: absolute;
 }
 
 .slide {
     height: 700px;
     margin: 20px;
+    z-index: 10000;
 }
 
 .thumbnail {
@@ -21,6 +46,25 @@
     display: inline-block;
     position: relative;
     background-color: white;
+    cursor: pointer;
+}
+
+.thumbnail.active {
+    border: 2px solid #41AFD4;
+}
+
+.layout.active{
+    border: 2px solid #5BCB82;
+}
+
+.layout {
+    height: 150px;
+    width: 170px;
+    margin: 20px;
+    display: inline-block;
+    position: relative;
+    background-color: white;
+    cursor: pointer;
 }
 
 .thumbnail-add {
@@ -39,11 +83,15 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
 .thumbnail .content i {
     display: block;
-    font-size: 3rem;
+    font-size: 2rem;
+}
+
+.presentation {
+    margin-top: 90px;
 }

@@ -1,5 +1,7 @@
 nav {
     background-color: #41AFD4;
+    z-index: 801;
+    position: absolute;
 }
 
 nav .btn {
@@ -37,4 +39,8 @@ nav .presentation-name {
 nav .presentation-name:hover, nav .presentation-name:active, nav .presentation-name:focus {
     border: 0!important;
     box-shadow: 0!important;
+}
+
+nav .dropdown-button {
+    margin-left: 15px;
 }
