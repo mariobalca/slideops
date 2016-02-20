@@ -1,13 +1,14 @@
 Template.nav.helpers({
-	});
+});
 
 Template.nav.events({
-	});
-
-Template.nav.onRendered(function ( ){
-	$(".dropdown-button").dropdown();
-	$(".button-menu").sideNav();
-	$(".new-presentation-js").click(function(){
+	'click .facebook-signin-js': function() {
+		Meteor.loginWithFacebook({loginStyle: 'popup'});
+  	},
+  	'click .logout-button-js': function() {
+		Meteor.logout();
+  	},
+	'click .new-presentation-js': function() {
 		Meteor.call('createPresentation', {
 	        name: 'New Presentation',
 	        public: false
@@ -18,5 +19,10 @@ Template.nav.onRendered(function ( ){
 	            Router.go('presentation.show', {_id: result});
 	        }
 	    });
-	});
-})
+	}
+});
+
+Template.nav.onRendered(function ( ){
+	$(".dropdown-button").dropdown();
+	$(".button-menu").sideNav();
+});
