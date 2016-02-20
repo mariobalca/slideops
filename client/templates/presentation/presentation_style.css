@@ -1,12 +1,29 @@
-.box {
-    height: 250px;
-    margin: 20px;
-    display: inline-block;
-    width: 100%;
-    position: relative;
+.thumbnail-list {
+    height: 700px;
+    text-align: center;
 }
 
-.box-add {
+.toolbar {
+    background-color: #ECECEC;
+    margin-bottom: 40px;
+    height: 50px;
+}
+
+.slide {
+    height: 700px;
+    margin: 20px;
+}
+
+.thumbnail {
+    height: 150px;
+    width: 170px;
+    margin: 20px;
+    display: inline-block;
+    position: relative;
+    background-color: white;
+}
+
+.thumbnail-add {
     background-color: #EDEDED;
     color: #C5C5C5;
     text-align: center;
@@ -16,7 +33,7 @@
     transform-style: preserve-3d;
 }
 
-.box-add .content {
+.thumbnail-add .content {
     display: inline-block;
     width: 100%;
     position: relative;
@@ -26,7 +43,7 @@
     font-weight: 400;
 }
 
-.box-add .content i {
+.thumbnail .content i {
     display: block;
     font-size: 3rem;
 }

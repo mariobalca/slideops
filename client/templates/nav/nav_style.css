@@ -9,10 +9,32 @@ nav .btn {
 
 nav .brand-logo {
     font-size: 1.5rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    float: left;
 }
 
 nav .button-menu {
     margin: 0 20px;
     display: inline-block;
     cursor: pointer;
+    float: left;
+}
+
+nav .presentation-name {
+    display: inline-block;
+    background-color: transparent;
+    border: 0;
+    width: 200px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    float: left;
+    margin-left: 20px;
+}
+
+nav .presentation-name:hover, nav .presentation-name:active, nav .presentation-name:focus {
+    border: 0!important;
+    box-shadow: 0!important;
 }
