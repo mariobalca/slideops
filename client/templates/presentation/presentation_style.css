@@ -41,7 +41,7 @@
 
 .thumbnails {
     height: 100%;
-    position: fixed;
+    position: absolute;;
     left: 0;
     top: 0;
     z-index: 2;
@@ -53,6 +53,7 @@
 .thumbnails-list {
     direction: rtl;
     overflow-y: auto;
+    max-height: 100%;
 }
 
 .thumbnail {
