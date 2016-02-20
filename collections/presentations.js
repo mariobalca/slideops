@@ -1,6 +1,6 @@
 Presentations = new Mongo.Collection("presentations");
 
-UserSchema = new SimpleSchema({
+PresentationUserSchema = new SimpleSchema({
     id: {type: String},
     name: {type: String}
 });
@@ -8,7 +8,7 @@ UserSchema = new SimpleSchema({
 PresentationSchema = new SimpleSchema({
     name: {type: String},
     public: {type: Boolean},
-    owner: {type: UserSchema}
+    owner: {type: PresentationUserSchema}
 });
 
 Presentations.allow({
@@ -35,6 +35,9 @@ Meteor.methods({
         check(presentation, PresentationSchema);
 
         var id = Presentations.insert(presentation);
+
+        // Create title slide
+        Meteor.call('createSlide', id, 'cover');
         return id;
     }
 });

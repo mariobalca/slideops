@@ -2,19 +2,13 @@
 	{{ > nav }}
 	<div class="thumbnails">
 		<div class="thumbnails-list">
-			<div class="thumbnail z-depth-1 active">
+			{{#each slides}}
+				<div data-id="{{_id}}" class="select-slide-js thumbnail z-depth-1">
+					{{_id}}
+				</div>
+			{{/each}}
 
-			</div>
-			<div class="thumbnail z-depth-1">
-
-			</div>
-			<div class="thumbnail z-depth-1">
-
-			</div>
-			<div class="thumbnail z-depth-1">
-
-			</div>
-			<div class="thumbnail thumbnail-add z-depth-1">
+			<div class="new-slide-js thumbnail thumbnail-add z-depth-1">
 				<span class="content">
 					<i class="fa fa-plus"></i>
 					<span>Novo slide</span>
@@ -93,7 +87,7 @@
 			<div class="row">
 				<div class="col offset-s2 offset-m2 offset-l2 l8 m8 s8">
 					<div class="slide-main z-depth-1">
-
+						{{active_slide}}
 					</div>
 				</div>
 			</div>
