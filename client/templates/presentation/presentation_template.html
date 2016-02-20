@@ -1,29 +1,53 @@
 <template name='presentation'>
 	{{ > nav }}
-	<div class="layout-list">
+	<div class="thumbnails">
+		<div class="thumbnails-list">
+			<div class="thumbnail z-depth-1 active">
+
+			</div>
+			<div class="thumbnail z-depth-1">
+
+			</div>
+			<div class="thumbnail z-depth-1">
+
+			</div>
+			<div class="thumbnail z-depth-1">
+
+			</div>
+			<div class="thumbnail thumbnail-add z-depth-1">
+				<span class="content">
+					<i class="fa fa-plus"></i>
+					<span>Novo slide</span>
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class="layouts">
 		<label>Layout</label>
-		<div class="layout z-depth-1 active">
-			<div class="content">
-				<p class="title">Cover</p>
-				<p class="subtitle">Title and subtitle</p>
+		<div class="layouts-list">
+			<div class="layout z-depth-1 active">
+				<div class="content">
+					<p class="title">Cover</p>
+					<p class="subtitle">Title and subtitle</p>
+				</div>
 			</div>
-		</div>
-		<div class="layout z-depth-1">
-			<div class="content">
-				<p class="title">Default</p>
-				<p class="subtitle">Header and paragraph</p>
+			<div class="layout z-depth-1">
+				<div class="content">
+					<p class="title">Default</p>
+					<p class="subtitle">Header and paragraph</p>
+				</div>
 			</div>
-		</div>
-		<div class="layout z-depth-1">
-			<div class="content">
-				<p class="title">Media</p>
-				<p class="subtitle">Header and media object</p>
+			<div class="layout z-depth-1">
+				<div class="content">
+					<p class="title">Media</p>
+					<p class="subtitle">Header and media object</p>
+				</div>
 			</div>
-		</div>
-		<div class="layout z-depth-1">
-			<div class="content">
-				<p class="title">Chart</p>
-				<p class="subtitle">Header and data visualization</p>
+			<div class="layout z-depth-1">
+				<div class="content">
+					<p class="title">Chart</p>
+					<p class="subtitle">Header and data visualization</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -67,29 +91,7 @@
 		</nav>
 		<div class="presentation">
 			<div class="row">
-				<div class="col l2 m2 s2">
-					<div class="row thumbnail-list">
-						<div class="col l12 m12 s12">
-							<a class="thumbnail z-depth-1 active">
-
-							</a>
-						</div>
-						<div class="col l12 m12 s12">
-							<a class="thumbnail z-depth-1">
-
-							</a>
-						</div>
-						<div class="col l12 m12 s12">
-							<a class="thumbnail thumbnail-add z-depth-1">
-								<span class="content">
-									<i class="fa fa-plus"></i>
-									<span>Novo slide</span>
-								</span>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="col l8 m8 s8">
+				<div class="col offset-s2 offset-m2 offset-l2 l8 m8 s8">
 					<div class="slide z-depth-1">
 
 					</div>
