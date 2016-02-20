@@ -1,6 +1,18 @@
 .slide-main {
     height: 700px;
     margin: 20px;
+    z-index: 100;
+    position: relative;
+}
+
+.slide-secondary {
+    height: 150px;
+    width: 200px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 200;
+    opacity: 0.8;
 }
 
 .slides {
@@ -58,6 +70,34 @@
     color: #606060;
 }
 
-.presentation-tabs {
-    background-color: #ECECEC;
+.question-mobile{
+    padding: 15px;
+    cursor: pointer;
+}
+
+.question{
+    padding: 15px;
+    margin: 10px 20px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.question:first-child{
+    margin-top: 20px;
+}
+
+.question .row{
+    margin-bottom: 0;
+}
+
+.circle-badge {
+    border-radius: 15px;
+    background-color: #526CCC;
+    padding: 5px 10px;
+    color: #fff;
+    margin: 10px;
+}
+
+.forms-questions {
+    background-color: #f0f0f0;
 }

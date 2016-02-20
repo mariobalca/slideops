@@ -1,0 +1,105 @@
+.format .tool.color-picker{
+    text-align: center;
+    margin: 0;
+    display: block;
+}
+
+.format .tool.tool-select {
+    position: relative;
+    display: inline-block;
+
+}
+.format .tool.tool-select .select-wrapper {
+    margin-left: 0;
+}
+
+.tool {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    margin-left: 30px;
+}
+
+.tool:first-child {
+    margin-left: 75px;
+}
+
+.color-picker label {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    padding: 20px;
+}
+
+.color-picker .color-square {
+    margin-bottom: 0;
+    margin-right: 0;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    border: 1px solid #9e9e9e;
+}
+
+.tool-select {
+    line-height: 1.5;
+    position: absolute;
+    top: 3px;
+}
+
+.select-wrapper input.select-dropdown {
+    color: #888;
+    width: 80px;
+    border: 0;
+}
+
+.presentation-time {
+    position: absolute;
+    top: 3px;
+    line-height: 1.5;
+    right: 75px;
+}
+
+.presentation-time .select-wrapper{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.carousel {
+    position: fixed;
+    background-color: #EDEDED;
+    height: 150px;
+    z-index: 200;
+    margin-top: 50px;
+}
+
+.carousel .item {
+    width: 150px;
+    height: 100px;
+    margin: 20px;
+    background-color: #fff;
+}
+
+.notes{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: block;
+    z-index: 100;
+    height: 100%;
+}
+
+.notes-list {
+    overflow-y: auto;
+    margin-top: 200px;
+}
+
+.notes-list .item {
+    padding: 15px;
+}

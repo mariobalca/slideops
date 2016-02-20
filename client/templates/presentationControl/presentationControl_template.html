@@ -1,0 +1,275 @@
+<template name='presentationControl'>
+	{{ > nav }}
+	<div class="hide-on-med-and-down">
+		<div class="thumbnails">
+			<div class="thumbnails-list">
+				<div class="thumbnail z-depth-1 active">
+
+				</div>
+				<div class="thumbnail z-depth-1">
+
+				</div>
+				<div class="thumbnail z-depth-1">
+
+				</div>
+				<div class="thumbnail z-depth-1">
+
+				</div>
+				<div class="thumbnail thumbnail-add z-depth-1">
+					<span class="content">
+						<i class="fa fa-plus"></i>
+						<span>Novo slide</span>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="layouts">
+			<label>Layout</label>
+			<div class="layouts-list">
+				<div class="layout z-depth-1 active">
+					<div class="content">
+						<p class="title">Cover</p>
+						<p class="subtitle">Title and subtitle</p>
+					</div>
+				</div>
+				<div class="layout z-depth-1">
+					<div class="content">
+						<p class="title">Default</p>
+						<p class="subtitle">Header and paragraph</p>
+					</div>
+				</div>
+				<div class="layout z-depth-1">
+					<div class="content">
+						<p class="title">Media</p>
+						<p class="subtitle">Header and media object</p>
+					</div>
+				</div>
+				<div class="layout z-depth-1">
+					<div class="content">
+						<p class="title">Chart</p>
+						<p class="subtitle">Header and data visualization</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">			
+			<div class="presentation">
+				<div class="row">
+					<div class="col offset-s2 offset-m2 offset-l2 l8 m8 s8">
+						<div class="slide-main z-depth-1">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="hide-on-large-only" >
+		<div class="presentation-mobile presentation-owner">
+			<div class="wrapper">
+				<ul class="tabs presentation-tabs z-depth-1">
+					<li class="tab col s3"><a class="active"  href="#overview">Overview</a></li>
+					<li class="tab col s3"><a href="#notes">Notas</a></li>
+					<li class="tab col s3"><a href="#format">Format</a></li>
+					<li class="tab col s3"><a href="#questions">Perguntas</a></li>
+				</ul>
+				<div id="overview" class="tab-content">
+					<div class="slide-main z-depth-1">
+						<div class="slide-secondary z-depth-1">
+
+						</div>
+					</div>
+				</div>
+				<div id="format" class="tab-content format">
+					<div class="row">
+						<div class="col s12">
+							<div class="tool color-picker">
+								<span class="color-square"></span>
+								<label>Background color</label>
+								<input type="hidden" name="color-input" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<div class="tool color-picker">
+								<span class="color-square"></span>
+								<label>Background color</label>
+								<input type="hidden" name="color-input" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12">
+							<div class="tool color-picker">
+								<span class="color-square"></span>
+								<label>Background color</label>
+								<input type="hidden" name="color-input" />
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s6">
+							<div class="tool tool-select">
+								<label>Font-size</label>
+								<select name="font-size">
+									<option value="small">Small</option>
+									<option value="medium" selected>Medium</option>
+									<option value="large">Large</option>
+								</select>
+							</div>
+						</div>
+						<div class="col s6">
+							<div class="tool tool-select presentation-time">
+								<label>Presentation Time</label>
+								<select name="presentation-time">
+									<option value="5">5 min</option>
+									<option value="10" selected>10 min</option>
+									<option value="15">15 min</option>
+									<option value="20">20 min</option>
+									<option value="30">30 min</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="questions" class="tab-content">
+					<div class="questions-list-mobile">
+						<div class="row">
+							<div class="col s12">
+								<h3>All Users Questions: </h3>
+								<div class="question-mobile z-depth-1">
+									<div class="row">
+										<div class="col s2">
+											<span class="circle-badge">2</span>
+										</div>
+										<div class="col s10">
+											Asked by <a href="#">username</a>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col s12">
+											Question here... lorem ipsum
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12">
+								<div class="question-mobile z-depth-1">
+									<div class="row">
+										<div class="col s2">
+											<span class="circle-badge">2</span>
+										</div>
+										<div class="col s10">
+											Asked by <a href="#">username</a>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col s12">
+											Question here... lorem ipsum
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12">
+								<div class="question-mobile z-depth-1">
+									<div class="row">
+										<div class="col s2">
+											<span class="circle-badge">2</span>
+										</div>
+										<div class="col s10">
+											Asked by <a href="#">username</a>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col s12">
+											Question here... lorem ipsum
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12">
+								<div class="question-mobile z-depth-1">
+									<div class="row">
+										<div class="col s2">
+											<span class="circle-badge">2</span>
+										</div>
+										<div class="col s10">
+											Asked by <a href="#">username</a>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col s12">
+											Question here... lorem ipsum
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="notes" class="tab-content">
+					<div class="carousel">
+						<div class="item z-depth-1">
+							1
+						</div>
+						<div class="item z-depth-1">
+							2
+						</div>
+						<div class="item z-depth-1">
+							3
+						</div>
+						<div class="item z-depth-1">
+							4
+						</div>
+					</div>
+					<div class="notes">
+						<div class="notes-list">
+							<div class="row">
+								<div class="col s12">
+									<div class="item z-depth-1">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis natus sequi ipsam totam ipsum ipsa modi voluptatem dolor recusandae illum pariatur, eum explicabo repellendus. In ullam perferendis dolorum tenetur. Quasi!
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col s12">
+									<div class="item z-depth-1">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis natus sequi ipsam totam ipsum ipsa modi voluptatem dolor recusandae illum pariatur, eum explicabo repellendus. In ullam perferendis dolorum tenetur. Quasi!
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col s12">
+									<div class="item z-depth-1">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis natus sequi ipsam totam ipsum ipsa modi voluptatem dolor recusandae illum pariatur, eum explicabo repellendus. In ullam perferendis dolorum tenetur. Quasi!
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col s12">
+									<div class="item z-depth-1">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis natus sequi ipsam totam ipsum ipsa modi voluptatem dolor recusandae illum pariatur, eum explicabo repellendus. In ullam perferendis dolorum tenetur. Quasi!
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col s12">
+									<div class="item z-depth-1">
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis natus sequi ipsam totam ipsum ipsa modi voluptatem dolor recusandae illum pariatur, eum explicabo repellendus. In ullam perferendis dolorum tenetur. Quasi!
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

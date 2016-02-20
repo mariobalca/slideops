@@ -2,23 +2,36 @@
 	<nav>
 		<div class="nav-wrapper">
 			<a class="button-menu" data-activates="nav-mobile"><i class="material-icons">menu</i></a>
-			<a href="/" class="brand-logo">SlideOPS</a>			
+			<a href="/" class="brand-logo">SlideOPS</a>
 			<ul id="nav-desktop" class="right hide-on-med-and-down">
 				{{#if currentUser}}
 					<li><button class="new-presentation-js waves-effect waves-light btn">Nova apresentação</button></li>
 				{{/if}}
-				<li><a class="dropdown-button" href="#!" data-activates="dropdown-menu">{{#if currentUser}}{{currentUser.profile.name}}{{else}}Login{{/if}}<i class="material-icons right">more_vert</i></a></li>
+				{{#if currentUser}}
+					{{currentUser.profile.name}}<li><a class="dropdown-button" href="#!" data-activates="dropdown-menu"><i class="material-icons right">more_vert</i></a></li>
+				{{else}}
+					<a href="#modalLogin" class="waves-effect waves-light btn modal-trigger">Login</a>
+				{{/if}}
 			</ul>
 		</div>
 		<ul id="dropdown-menu" class="dropdown-content">
 			{{#if currentUser}}
 				<li><a class="logout-button-js" href="#">Logout</a></li>
-			{{else}}
-				<li><a class="facebook-signin-js" href="#">Login With Facebook</a></li>
 			{{/if}}
 		</ul>
 	</nav>
 	<ul id="nav-mobile" class="side-nav">
 		<li><a href="#">YO</a></li>
 	</ul>
+
+	<!-- Modal Structure -->
+	<div id="modalLogin" class="modal">
+		<div class="modal-content">
+			<div class="row">
+				<div class="col-m12">
+					<a class="facebook-signin-js" href="#">Login With Facebook</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
