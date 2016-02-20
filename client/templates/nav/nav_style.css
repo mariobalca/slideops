@@ -4,6 +4,12 @@ nav {
     position: absolute;
 }
 
+@media only screen and (max-width: 992px){
+    nav .brand-logo {
+        left: 0;
+    }
+}
+
 nav .btn {
     background-color: #287995;
     font-weight: bold;
@@ -22,23 +28,6 @@ nav .button-menu {
     display: inline-block;
     cursor: pointer;
     float: left;
-}
-
-nav .presentation-name {
-    display: inline-block;
-    background-color: transparent;
-    border: 0;
-    width: 200px;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    float: left;
-    margin-left: 20px;
-}
-
-nav .presentation-name:hover, nav .presentation-name:active, nav .presentation-name:focus {
-    border: 0!important;
-    box-shadow: 0!important;
 }
 
 nav .dropdown-button {

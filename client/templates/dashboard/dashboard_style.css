@@ -9,3 +9,87 @@
 .tabs .tab a{
     color: #fff;
 }
+
+.item {
+    position: relative;
+    margin: 20px;
+}
+
+.item .preview {
+    height: 200px;
+}
+
+.item .info {
+    background-color: #fff;
+    padding: 15px;
+    height: 75px;
+}
+
+.item .info .title {
+    font-weight: 600;
+}
+
+.item .info .title, .item .info .author {
+    color: #aaaaaa;
+    margin: 0;
+}
+
+.item .preview {
+    position: relative;
+}
+
+.item .preview .content {
+    position: relative;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.item .preview .title{
+    color: #fff;
+    margin: 0;
+    font-weight: 600;
+}
+
+.item .preview .subtitle{
+    color: #fff;
+    margin: 0;
+}
+
+.item .preview .slides {
+    color: #aaaaaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.item .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.item .overlay:hover {
+    opacity: 1;
+    border: 2px solid #41AFD4;
+    transition: all 0.2 ease;
+}
+
+.item .overlay .icon {
+    height: 200px;
+    display: block;
+    line-height: 200px;
+}
+.item .overlay .icon i {
+    color: #41AFD4;
+    font-size: 50px;
+}
