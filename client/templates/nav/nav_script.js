@@ -16,7 +16,7 @@ Template.nav.events({
 	        if(error) {
 				alert(error.reason);
 	        } else {
-	            Router.go('presentation.show', {_id: result});
+	            Router.go('presentation.edit', {_id: result});
 	        }
 	    });
 	}
