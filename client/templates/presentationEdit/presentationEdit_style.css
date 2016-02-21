@@ -4,6 +4,10 @@
     z-index: 10000;
 }
 
+.slide-main input {
+    text-align: center;
+}
+
 .toolbar {
     background-color: #ECECEC;
     height: 50px;

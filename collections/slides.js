@@ -52,5 +52,18 @@ Meteor.methods({
         slides.push(id);
         Presentations.update({_id: pres_id}, {$set: {slides: slides}});
         return id;
+    },
+    updateData: function(slide_id, data){
+        Slides.update({_id: slide_id}, {$set: {data: data}});
+    },
+    updateLayout: function(slide_id, layout_name){
+        console.log(layout_name);
+        layout = Layouts.findOne({name: layout_name});
+        lay = {
+            id: layout._id,
+            name: 'layout_'+layout_name
+        };
+        Slides.update({_id: slide_id}, {$set: {layout: lay}});
+        Slides.update({_id: slide_id}, {$set: {data: layout.data}});
     }
 });

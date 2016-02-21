@@ -19,25 +19,25 @@
 	<div class="layouts">
 		<label>Layout</label>
 		<div class="layouts-list">
-			<div class="layout z-depth-1 active">
+			<div id="layout_cover" data-layout="cover" class="layout z-depth-1 active">
 				<div class="content">
 					<p class="title">Cover</p>
 					<p class="subtitle">Title and subtitle</p>
 				</div>
 			</div>
-			<div class="layout z-depth-1">
+			<div id="layout_default" data-layout="default" class="layout z-depth-1">
 				<div class="content">
 					<p class="title">Default</p>
 					<p class="subtitle">Header and paragraph</p>
 				</div>
 			</div>
-			<div class="layout z-depth-1">
+			<div id="layout_media" data-layout="media" class="layout z-depth-1">
 				<div class="content">
 					<p class="title">Media</p>
 					<p class="subtitle">Header and media object</p>
 				</div>
 			</div>
-			<div class="layout z-depth-1">
+			<div id="layout_chart" data-layout="chart" class="layout z-depth-1">
 				<div class="content">
 					<p class="title">Chart</p>
 					<p class="subtitle">Header and data visualization</p>
@@ -87,11 +87,13 @@
 			<div class="row">
 				<div class="col offset-s2 offset-m2 offset-l2 l8 m8 s8">
 					<div class="slide-main z-depth-1">
-						{{#if current_layout 'layout_cover'}}
-							COVER!!
+						{{#if slide_layout 'layout_cover'}}
+							<input type="text" data-field="title" value="{{slide_data.title}}" placeholder="Title">
+							<input type="text" data-field="subtitle" value="{{slide_data.subtitle}}" placeholder="Subtitle">
 						{{/if}}
-						{{#if current_layout 'layout_default'}}
-							DEFAULT!!
+						{{#if slide_layout 'layout_default'}}
+							<input type="text" data-field="header" value="{{slide_data.header}}" placeholder="Header">
+							<input type="text" data-field="paragraph" value="{{slide_data.paragraph}}" placeholder="Paragraph">
 						{{/if}}
 					</div>
 				</div>
