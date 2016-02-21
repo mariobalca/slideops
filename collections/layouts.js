@@ -30,5 +30,19 @@ Meteor.startup(function(){
                 paragraph: "Paragraph"
             }
         });
+        Layouts.insert({
+            name: "media",
+            data: {
+                header: "Header",
+                youtube: "Youtube"
+            }
+        });
+        Layouts.insert({
+            name: "chart",
+            data: {
+                header: "Header",
+                chart: "Chart"
+            }
+        });
     }
 });
