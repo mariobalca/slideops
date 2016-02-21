@@ -1,0 +1,20 @@
+.slide-layout {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+
+.slide-layout .content{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slide-layout .content h1 {
+    margin-top: 0;   
+}
