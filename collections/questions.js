@@ -3,7 +3,8 @@ Questions = new Mongo.Collection("questions");
 QuestionsSchema = new SimpleSchema({
     id: {type: String},
     data: {type: Object},
-    answers: {type: Oject}
+    answers: {type: [String]},
+    slide: {type: Object}
 });
 
 
@@ -24,16 +25,20 @@ Meteor.methods({
         check(Meteor.userId(), String);
 
         question = {
-            data: data
+            data: data,
+            answers: [],
+            slide: {id: slide_id}
         }
 
         var id = Questions.insert(question);
         return id;
     },
-    updateData: function(data){
-        Questions.update({_id: p}, {$set: {data: data}});
+    updateData: function(qid, data){
+        Questions.update({_id: qid}, {$set: {data: data}});
     },
-    anwswer: function(data, ) {
-
+    anwswer: function(qid, answer) {
+        ans = Questions.find({_id: qid}).answers;
+        ans.push(answer);
+        Questions.update({_id: qid}, {$set: {answers: ans}});
     }
 });
