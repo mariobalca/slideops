@@ -6,8 +6,8 @@
 			<ul id="nav-desktop" class="right hide-on-med-and-down">
 				{{#if currentUser}}
 					<li><button class="new-presentation-js waves-effect waves-light btn">Nova apresentação</button></li>
-					{{currentUser.profile.name}}<li><a class="dropdown-button" href="#!" data-activates="dropdown-menu"><i class="material-icons right">more_vert</i></a></li>
-				{{else}}
+				{{#if currentUser}}
+					<li><a class="dropdown-button" href="#!" data-activates="dropdown-menu">{{currentUser.profile.name}} <i class="material-icons right">more_vert</i></a></li>
 					<a href="#modalLogin" class="waves-effect waves-light btn modal-trigger">Login</a>
 				{{/if}}
 			</ul>
