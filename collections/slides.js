@@ -5,7 +5,8 @@ SlidesPresentationSchema = new SimpleSchema({
 });
 
 SlidesLayoutSchema = new SimpleSchema({
-    id: {type: String}
+    id: {type: String},
+    name: {type: String}
 });
 
 SlideSchema = new SimpleSchema({
@@ -37,7 +38,8 @@ Meteor.methods({
 
         layout = Layouts.findOne({name: layout_name});
         slide.layout = {
-            id: layout._id
+            id: layout._id,
+            name: layout_name
         }
 
         slide.data = layout.data;
@@ -45,6 +47,10 @@ Meteor.methods({
         //check(slide, SlideSchema);
 
         var id = Slides.insert(slide);
+
+        slides = Presentations.findOne({_id: pres_id}).slides;
+        slides.push(id);
+        Presentations.update({_id: pres_id}, {$set: {slides: slides}});
         return id;
     }
 });
