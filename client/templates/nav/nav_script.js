@@ -3,7 +3,7 @@ Template.nav.helpers({
 
 Template.nav.events({
 	'click .facebook-signin-js': function() {
-		Meteor.loginWithFacebook({loginStyle: 'popup'});
+		Meteor.loginWithFacebook({loginStyle: 'redirect'});
   	},
   	'click .logout-button-js': function() {
 		Meteor.logout();
