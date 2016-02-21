@@ -6,19 +6,17 @@
 			<ul id="nav-desktop" class="right hide-on-med-and-down">
 				{{#if currentUser}}
 					<li><button class="new-presentation-js waves-effect waves-light btn">Nova apresentação</button></li>
-				{{/if}}
-				{{#if currentUser}}
 					{{currentUser.profile.name}}<li><a class="dropdown-button" href="#!" data-activates="dropdown-menu"><i class="material-icons right">more_vert</i></a></li>
 				{{else}}
 					<a href="#modalLogin" class="waves-effect waves-light btn modal-trigger">Login</a>
 				{{/if}}
 			</ul>
 		</div>
-		<ul id="dropdown-menu" class="dropdown-content">
-			{{#if currentUser}}
+		{{#if currentUser}}
+			<ul id="dropdown-menu" class="dropdown-content">
 				<li><a class="logout-button-js" href="#">Logout</a></li>
-			{{/if}}
-		</ul>
+			</ul>
+		{{/if}}
 	</nav>
 	<ul id="nav-mobile" class="side-nav">
 		<li><a href="#">YO</a></li>
