@@ -5,9 +5,15 @@ PresentationUserSchema = new SimpleSchema({
     name: {type: String}
 });
 
+PresentationLiveSchema = new SimpleSchema({
+    current_slide: {type: Number}
+})
+
 PresentationSchema = new SimpleSchema({
     name: {type: String},
     public: {type: Boolean},
+    live: {type: PresentationLiveSchema},
+    slides: {type: [String]},
     owner: {type: PresentationUserSchema}
 });
 
@@ -15,22 +21,24 @@ Presentations.allow({
     insert: function(userId, doc){
         return doc.userId === userId;
     },
-    /*update: function(){
-        return true;
-    },*/
     remove: function(userId, doc){
         return true;
     }
 });
 
 Meteor.methods({
-    createPresentation: function(presentation){
+    'createPresentation': function(presentation){
         check(Meteor.userId(), String);
 
         presentation.owner = {
             id: Meteor.userId(),
             name: Meteor.user().profile.name
         }
+
+        presentation.live = {
+            current_slide: 1
+        }
+        presentation.slides = [];
 
         check(presentation, PresentationSchema);
 
@@ -39,14 +47,22 @@ Meteor.methods({
         // Create title slide
         Meteor.call('createSlide', id, 'cover');
         return id;
-    }
-});
-
-Meteor.startup(function(){
-    if(Meteor.isServer && Presentations.find().count() === 0){
-        Presentations.insert({
-            name: "Test Presentation",
-            public: true,
-        });
+    },
+    'nextSlide': function(pres_id){
+        pres = Presentations.findOne({_id: pres_id});
+        slides = pres.slides;
+        slide_n = pres.live.current_slide + 1;
+        if(slide_n > slides.length){
+            return false;
+        }
+        Presentations.update({_id: pres_id}, {$set: {live: {current_slide: slide_n}}});
+    },
+    'prevSlide': function(pres_id){
+        slide_n = Presentations.findOne({_id: pres_id}).live.current_slide - 1;
+        if(slide_n <= 0){
+            return false;
+        }
+        Presentations.update({_id: pres_id}, {$set: {live: {current_slide: slide_n}}});
+        return true;
     }
 });
