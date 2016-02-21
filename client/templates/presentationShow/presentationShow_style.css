@@ -1,5 +1,12 @@
 .slide-main {
-    height: 700px;
+    height: 500px;
+    margin: 20px;
+    z-index: 100;
+    position: relative;
+}
+
+.slide-main-mobile {
+    height: 300px;
     margin: 20px;
     z-index: 100;
     position: relative;
@@ -13,6 +20,16 @@
     bottom: 20px;
     z-index: 200;
     opacity: 0.8;
+}
+
+#overview {
+    padding-top: 50px;
+    text-align: center;
+}
+
+#questions {
+    padding-top: 70px;
+    text-align: center;
 }
 
 .slides {

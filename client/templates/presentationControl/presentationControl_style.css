@@ -97,9 +97,35 @@
 
 .notes-list {
     overflow-y: auto;
+}
+
+.mobile-vertical-spacer {
     margin-top: 200px;
 }
 
 .notes-list .item {
     padding: 15px;
+}
+
+.note {
+    padding:15px;
+    margin: 20px;
+}
+
+.controls {
+    text-align: left;
+    margin: 20px;
+}
+
+.controls .timer {
+    text-align: right;
+}
+
+.controls .timer .btn-floating i{
+    font-size: 1rem;
+    text-align: center;
+}
+
+.controls .timer .time {
+    font-size: 1.8rem;
 }
