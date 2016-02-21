@@ -1,7 +1,7 @@
 Template.presentationShow.helpers({
 	relativeUrl: function(param) {
-		if(param == 'question')
-			return Router.current().url + '/question';
+		if (param == 'question')
+			return '/question/' + Router.current().params._id;
 	}
 });
 

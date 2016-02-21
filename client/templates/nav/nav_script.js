@@ -1,4 +1,16 @@
 Template.nav.helpers({
+	isEdit: function() {
+		if (Router.current().route.getName() == 'edit')
+			return true;
+	},
+	isControl: function() {
+		if (Router.current().route.getName() == 'control')
+			return true;
+	},
+	relativeUrl: function(param) {
+		if(param == 'slides')
+			return '/slides/' + Router.current().params._id + '';
+	},
 });
 
 Template.nav.events({
@@ -16,7 +28,7 @@ Template.nav.events({
 	        if(error) {
 				alert(error.reason);
 	        } else {
-	            Router.go('presentation.edit', {_id: result});
+	            Router.go('edit', {_id: result});
 	        }
 	    });
 	}
