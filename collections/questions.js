@@ -1,9 +1,8 @@
-/*Questions = new Mongo.Collection("questions");
+Questions = new Mongo.Collection("questions");
 
 QuestionsSchema = new SimpleSchema({
     id: {type: String},
-    data: {type: Object},
-    answers: {type: [String]},
+    user_answers: {type: [String]},
     slide: {type: Object}
 });
 
@@ -11,31 +10,27 @@ QuestionsSchema = new SimpleSchema({
 Questions.allow({
     insert: function(userId, doc){
         return true;
-    },    
+    },
     remove: function(userId, doc){
         return true;
     }
 });
 
 Meteor.methods({
-    createQuestion: function(slide_id, data){
+    createQuestion: function(slide_id){
         check(Meteor.userId(), String);
 
         question = {
-            data: data,
-            answers: [],
-            slide: {id: slide_id}
+            slide: {id: slide_id},
+            user_answers: []
         }
 
         var id = Questions.insert(question);
         return id;
     },
-    updateData: function(qid, data){
-        Questions.update({_id: qid}, {$set: {data: data}});
-    },
-    anwswer: function(qid, answer) {
-        ans = Questions.find({_id: qid}).answers;
+    userAnwswer: function(qid, answer) {
+        ans = Questions.find({_id: qid}).user_answers;
         ans.push(answer);
-        Questions.update({_id: qid}, {$set: {answers: ans}});
+        Questions.update({_id: qid}, {$set: {user_answers: ans}});
     }
-});*/
+});
