@@ -65,5 +65,14 @@ Meteor.methods({
         };
         Slides.update({_id: slide_id}, {$set: {layout: lay}});
         Slides.update({_id: slide_id}, {$set: {data: layout.data}});
+    },
+    userAnwswer: function(slide_id, answer) {
+        data = Slides.findOne({_id: slide_id}).data;
+        ans = data.user_answers;
+        if(ans == undefined)
+            ans = [];
+        ans.push(answer);
+        data.user_answers = ans;
+        Slides.update({_id: slide_id}, {$set: {data: data}});
     }
 });

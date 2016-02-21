@@ -2,7 +2,12 @@ var active_slide_js = null;
 
 Template.presentationEdit.helpers({
 	slides: function() {
-		return Slides.find({presentation: {id: Router.current().params._id}});
+		slides = []
+		pslides = Presentations.findOne({_id: Router.current().params._id}).slides;
+		for(i=0;i<pslides.length;++i){
+			slides.push(Slides.findOne({_id: pslides[i]}));
+		}
+		return slides;
 	},
 	slide_layout: function(param) {
 		return Slides.findOne({_id: Session.get('activeSlideId')}).layout.name == param;

@@ -64,6 +64,11 @@
 						<div class="slide-main z-depth-1">
 							{{> Template.dynamic template='slide'}}
 						</div>
+						{{#if current_layout 'layout_chart' }}
+							<button data-answer="{{ slide_data.answer1 }}" class="answer-chart waves-effect waves-light btn">{{slide_data.answer1}}</button>
+							<button data-answer="{{ slide_data.answer2 }}" class="answer-chart waves-effect waves-light btn">{{slide_data.answer2}}</button>
+							<button data-answer="{{ slide_data.answer3 }}" class="answer-chart waves-effect waves-light btn">{{slide_data.answer3}}</button>
+						{{/if}}
 					</div>
 				</div>
 			</div>
@@ -85,8 +90,8 @@
 					</div>
 					{{#if current_layout 'layout_chart' }}
 						<button data-answer="{{ slide_data.answer1 }}" class="answer-chart waves-effect waves-light btn">{{slide_data.answer1}}</button>
-						<button data-answer="{{ slide_data.answer1 }}" class="answer-chart waves-effect waves-light btn">{{slide_data.answer2}}</button>
-						<button data-answer="{{ slide_data.answer1 }}" class="answer-chart waves-effect waves-light btn">{{slide_data.answer3}}</button>
+						<button data-answer="{{ slide_data.answer2 }}" class="answer-chart waves-effect waves-light btn">{{slide_data.answer2}}</button>
+						<button data-answer="{{ slide_data.answer3 }}" class="answer-chart waves-effect waves-light btn">{{slide_data.answer3}}</button>
 					{{/if}}
 				</div>
 				<div id="questions-mobile" class="tab-content">
