@@ -4,7 +4,7 @@ Template.slide.helpers({
         slide_n = pres.live.current_slide;
         slides = pres.slides;
         slide = Slides.findOne({_id: slides[slide_n-1]});
-        return 'layout_'+slide.layout.name;
+        return slide.layout.name;
     },
     slide_data: function() {
         console.log('YAY');

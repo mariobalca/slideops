@@ -4,8 +4,8 @@ Template.presentationEdit.helpers({
 	slides: function() {
 		return Slides.find({presentation: {id: Router.current().params._id}});
 	},
-	active_slide: function() {
-		return Session.get('activeSlideId');
+	current_layout: function(param) {
+		return Slides.findOne({_id: Session.get('activeSlideId')}).layout.name == param;
 	}
 });
 

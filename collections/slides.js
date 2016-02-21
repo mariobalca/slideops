@@ -39,7 +39,7 @@ Meteor.methods({
         layout = Layouts.findOne({name: layout_name});
         slide.layout = {
             id: layout._id,
-            name: layout_name
+            name: 'layout_'+layout_name
         }
 
         slide.data = layout.data;

@@ -3,8 +3,8 @@
 	<div class="thumbnails">
 		<div class="thumbnails-list">
 			{{#each slides}}
-				<div data-id="{{_id}}" class="select-slide-js thumbnail z-depth-1">
-					{{_id}}
+				<div data-id="{{_id}}" class="select-slide-js thumbnail z-depth-1" style="text-align: center;">
+					{{> Template.dynamic template=layout.name data=data}}
 				</div>
 			{{/each}}
 
@@ -87,7 +87,12 @@
 			<div class="row">
 				<div class="col offset-s2 offset-m2 offset-l2 l8 m8 s8">
 					<div class="slide-main z-depth-1">
-						{{active_slide}}
+						{{#if current_layout 'layout_cover'}}
+							COVER!!
+						{{/if}}
+						{{#if current_layout 'layout_default'}}
+							DEFAULT!!
+						{{/if}}
 					</div>
 				</div>
 			</div>
