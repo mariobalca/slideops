@@ -1,4 +1,4 @@
-Questions = new Mongo.Collection("questions");
+/*Questions = new Mongo.Collection("questions");
 
 QuestionsSchema = new SimpleSchema({
     id: {type: String},
@@ -11,10 +11,7 @@ QuestionsSchema = new SimpleSchema({
 Questions.allow({
     insert: function(userId, doc){
         return true;
-    },
-    /*update: function(){
-        return true;
-    },*/
+    },    
     remove: function(userId, doc){
         return true;
     }
@@ -41,4 +38,4 @@ Meteor.methods({
         ans.push(answer);
         Questions.update({_id: qid}, {$set: {answers: ans}});
     }
-});
+});*/
