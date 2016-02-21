@@ -79,6 +79,7 @@
 
 .thumbnail .slide-layout {
     zoom: 30%;
+    direction: ltr;
 }
 
 .layout {
