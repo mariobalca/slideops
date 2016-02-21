@@ -26,4 +26,5 @@ Template.presentationEdit.onCreated(function (){
 
 Template.presentationEdit.onRendered(function (){
 	$('select').material_select();
+	$('.select-slide-js').first().addClass('active');
 });
