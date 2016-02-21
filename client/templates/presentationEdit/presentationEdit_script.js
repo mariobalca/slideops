@@ -6,7 +6,7 @@ Template.presentationEdit.helpers({
 	},
 	active_slide: function() {
 		return Session.get('activeSlideId');
-	}
+	},
 });
 
 Template.presentationEdit.events({

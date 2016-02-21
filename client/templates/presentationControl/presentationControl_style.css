@@ -74,7 +74,6 @@
     background-color: #EDEDED;
     height: 150px;
     z-index: 200;
-    margin-top: 50px;
 }
 
 .carousel .item {
@@ -100,7 +99,7 @@
 }
 
 .mobile-vertical-spacer {
-    margin-top: 200px;
+    margin-top: 280px;
 }
 
 .notes-list .item {
@@ -128,4 +127,8 @@
 
 .controls .timer .time {
     font-size: 1.8rem;
+}
+
+.tabs-content {
+    padding-top: 50px;
 }
