@@ -8,7 +8,7 @@
 					<li><button class="new-presentation-js waves-effect waves-light btn">Nova apresentação</button></li>
 				{{/if}}
 				{{#if currentUser}}
-					{{currentUser.profile.name}}<li><a class="dropdown-button" href="#!" data-activates="dropdown-menu"><i class="material-icons right">more_vert</i></a></li>
+					<li><a class="dropdown-button" href="#!" data-activates="dropdown-menu">{{currentUser.profile.name}} <i class="material-icons right">more_vert</i></a></li>
 				{{else}}
 					<a href="#modalLogin" class="waves-effect waves-light btn modal-trigger">Login</a>
 				{{/if}}
