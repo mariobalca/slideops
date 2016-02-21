@@ -31,7 +31,10 @@ Template.nav.events({
 	            Router.go('edit', {_id: result});
 	        }
 	    });
-	}
+	},
+	'click .launch-button': function() {
+		Meteor.call('presentationLaunch', Router.current().params._id);
+  	},
 });
 
 Template.nav.onRendered(function ( ){

@@ -1,5 +1,8 @@
 Template.presentationControl.helpers({
-	});
+	slides: function() {
+		return Slides.find({presentation: {id: Router.current().params._id}});
+	},
+});
 
 Template.presentationControl.events({
 	});

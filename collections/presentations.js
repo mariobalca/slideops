@@ -14,7 +14,8 @@ PresentationSchema = new SimpleSchema({
     public: {type: Boolean},
     live: {type: PresentationLiveSchema},
     slides: {type: [String]},
-    owner: {type: PresentationUserSchema}
+    owner: {type: PresentationUserSchema},
+    islive: {type: Boolean}
 });
 
 Presentations.allow({
@@ -39,6 +40,7 @@ Meteor.methods({
             current_slide: 1
         }
         presentation.slides = [];
+        presentation.islive = false;
 
         check(presentation, PresentationSchema);
 
@@ -64,5 +66,8 @@ Meteor.methods({
         }
         Presentations.update({_id: pres_id}, {$set: {live: {current_slide: slide_n}}});
         return true;
+    },
+    'presentationLaunch': function(pres_id){
+        Presentations.update({_id: pres_id}, {$set: {islive: true}});
     }
 });

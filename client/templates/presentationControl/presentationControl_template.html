@@ -13,16 +13,18 @@
 					<div class="row">
 						<div class="col s2 offset-s1">
 							<div class="thumbnails-list">
-								<div data-id="{{_id}}" class="select-slide-js thumbnail z-depth-1">
-									asd
-								</div>
+								{{#each slides}}
+									<div data-id="{{_id}}" class="select-slide-js thumbnail z-depth-1">
+										{{> Template.dynamic template=layout.name data=data}}
+									</div>
+								{{/each}}
 							</div>
 						</div>
 						<div class="col s6">
 							<div class="row">
 								<div class="col s12 s12">
 									<div class="slide-main z-depth-1">
-
+										<!--{{> Template.dynamic template='slide'}}-->
 									</div>
 									<div class="controls">
 										<div class="row">
@@ -169,7 +171,7 @@
 							<div class="row">
 								<div class="col m12 l12">
 									<div class="slide-main z-depth-1">
-
+										<!--{{> Template.dynamic template='slide'}}-->
 									</div>
 								</div>
 							</div>
@@ -222,9 +224,9 @@
 			</ul>
 			<div id="overview-mobile" class="tabs-content">
 				<div class="slide-main-mobile z-depth-1">
-					<div class="slide-secondary z-depth-1">
-
-					</div>
+					{{> Template.dynamic template='slide'}}
+					<!--<div class="slide-secondary z-depth-1">
+					</div>-->
 				</div>
 			</div>
 			<div id="format-mobile" class="tabs-content format">
