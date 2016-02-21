@@ -97,6 +97,7 @@
     margin: 10px 20px;
     cursor: pointer;
     text-align: left;
+    background-color: #fff;
 }
 
 .question:first-child{

@@ -1,16 +1,68 @@
 <template name='presentationShow'>
 	{{ > nav }}
 	<div class="hide-on-med-and-down">
+		<div class="thumbnails">
+			<div class="thumbnails-list">
+				{{#each slides}}
+					<div data-id="{{_id}}" class="select-slide-js thumbnail z-depth-1" style="text-align: center;">
+						{{> Template.dynamic template=layout.name data=data}}
+					</div>
+				{{/each}}
+			</div>
+		</div>
+		<div class="questions">
+			<div class="row">
+				<div class="col s12">
+					<label>Make a question</label>
+					<select>
+						<option disabled>Select a slide</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="1">3</option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12">
+					<input type="text" placeholder="Your question" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12">
+					<a class="waves-effect waves-light btn">Confirm</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12">
+					<label>All users questions</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12">
+					<div class="question z-depth-1">
+						<div class="row">
+							<div class="col s2">
+								<span class="circle-badge">2</span>
+							</div>
+							<div class="col s10">
+								Asked by <a href="#">username</a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s10 offset-s2">
+								Question here... lorem ispum
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="wrapper">
 			<div class="presentation">
 				<div class="row">
 					<div class="col offset-s2 offset-m2 offset-l2 l8 m8 s8">
-						<div class="row">
-							<div class="col m12 l12">
-								<div class="slide-main z-depth-1">
+						<div class="slide-main z-depth-1">
 
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>

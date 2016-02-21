@@ -29,6 +29,7 @@
 }
 .layouts-list {
     overflow-y: auto;
+    max-height: 100%;
 }
 
 .layouts label {
